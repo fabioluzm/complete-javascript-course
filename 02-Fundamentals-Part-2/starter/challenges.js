@@ -31,11 +31,11 @@ const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3
 
 // 2.
 // data 1
-// const scoreDolphins = calcAverage(44, 23, 71)
-// const scoreKoalas = calcAverage(65, 54, 49)
+let scoreDolphins = calcAverage(44, 23, 71)
+let scoreKoalas = calcAverage(65, 54, 49)
 // data 2
-const scoreDolphins = calcAverage(85, 54, 41)
-const scoreKoalas = calcAverage(23, 34, 27)
+scoreDolphins = calcAverage(85, 54, 41)
+scoreKoalas = calcAverage(23, 34, 27)
 
 // 3.
 function checkWinner(avgDolphins, avgKoalas) {
@@ -49,4 +49,4 @@ function checkWinner(avgDolphins, avgKoalas) {
 }
 const victory = checkWinner(scoreDolphins, scoreKoalas)
 
-// console.log('C1 => ', scoreDolphins, scoreKoalas, victory)
+console.log('C1 => ', scoreDolphins, scoreKoalas, victory)
