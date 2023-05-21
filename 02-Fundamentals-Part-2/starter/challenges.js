@@ -49,4 +49,4 @@ function checkWinner(avgDolphins, avgKoalas) {
 }
 const victory = checkWinner(scoreDolphins, scoreKoalas)
 
-console.log('C1 => ', scoreDolphins, scoreKoalas, victory)
+// console.log('C1 => ', scoreDolphins, scoreKoalas, victory)
