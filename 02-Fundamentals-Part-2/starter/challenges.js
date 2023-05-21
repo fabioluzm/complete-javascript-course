@@ -50,3 +50,98 @@ function checkWinner(avgDolphins, avgKoalas) {
 const victory = checkWinner(scoreDolphins, scoreKoalas)
 
 // console.log('C1 => ', scoreDolphins, scoreKoalas, victory)
+
+// Coding Challenge #2
+// 1.
+// const calcTip = function (bill) {
+//   if (bill >= 50 && bill <= 300) {
+//     return bill * 0.15
+//   } else {
+//     return  bill * 0.2
+//   }
+// }
+
+const calcTip = (bill) => {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2
+}
+
+// 2.
+const bills = [125, 555, 44]
+
+// 3.
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
+
+// Bonus
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]]
+
+// console.log('C2 => ', bills)
+// console.log('C2 => ', tips)
+// console.log('C2 => ', total)
+
+// Coding Challenge #3
+
+// 1.
+const mark = {
+  firstName: 'Mark',
+  lastName: 'Miller',
+  mass: 78,
+  height: 1.69,
+
+  // 2.
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2
+    return this.bmi
+  },
+}
+
+const john = {
+  firstName: 'John',
+  lastName: 'Smith',
+  mass: 92,
+  height: 1.95,
+
+  // 2.
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2
+    return this.bmi
+  },
+}
+let BMImsg
+if (mark.calcBMI() > john.calcBMI()) {
+  BMImsg = `${mark.firstName}'s BMI(${mark.bmi}) is higher than ${john.firstName}'s (${john.bmi}))`
+} else {
+  BMImsg = `${john.firstName}'s BMI(${john.bmi}) is higher than ${mark.firstName}'s (${mark.bmi}))`
+}
+// console.log('C3 => ', BMImsg)
+
+// Coding Challenge 4
+// Test data: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
+
+// 1.
+const c4Bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+// 2.
+const c4Tips = []
+const c4Total = []
+// 3.
+const c4CalcTip = (bill) => {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2
+}
+
+for (let i = 0; i < c4Bills.length; i++) {
+  const tip = c4CalcTip(c4Bills[i])
+  c4Tips.push(tip)
+  c4Total.push(c4Bills[i] + c4Tips[i])
+}
+console.log('C4 => ', c4Tips)
+console.log('C4 => ', c4Total)
+
+// Bonus
+const c4CalcAverage = function (arr) {
+  let sum = 0
+  for (let i = 0; i < arr.length; i++) {
+    // sum = sum + arr[i]
+    sum += arr[i]
+  }
+  return sum / arr.length
+}
+console.log('C4 => ', c4CalcAverage(c4Total))
